@@ -10,7 +10,8 @@ if [[ `expr $(date '+%s') - $(expr $(cat ./begin))` -ge 86400 ]]; then
     git commit -m 'update'
     git push -u all master -f
 
-    echo $(date '+%s') > ./begin
+    # 更新值为运行当天时间戳
+    echo  $(date -d "`date +%Y-%m-%d`" +%s) > ./begin
 fi
 
 git push -u all master -f

@@ -26,5 +26,5 @@ git push -u all master -f
 ## 定时任务
 
 ```
-0 0 */8 * * ? cd /the_elderly_are_available; /bin/bash ./commit.sh;
+*  */8 * * *   root    cd /the_elderly_are_available; /bin/bash ./commit.sh;
 ```
